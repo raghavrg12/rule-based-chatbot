@@ -1,25 +1,90 @@
-# Rule-Based AI Chatbot - DecodeLabs Project 1
+# 🤖 Rule-Based AI Chatbot
 
-## Overview
-This repository contains a deterministic, rule-based AI chatbot developed as part of the DecodeLabs Industrial Training Kit (Batch: 2026)[cite: 1]. 
+A simple Rule-Based AI Chatbot developed in Python as part of the **DecodeLabs Artificial Intelligence Project 1**.
 
-Before diving into probabilistic deep learning (System 1), this project focuses on mastering the "White Box" logic engine (System 2)[cite: 1]. It serves as a foundational exercise in control flow, intent matching, and algorithmic efficiency[cite: 1]. 
+## 📌 Project Overview
 
-## ⚙️ Architecture & IPO Model
-The system is built on the Input-Process-Output (IPO) model to ensure 100% traceability and zero hallucination risk[cite: 1]:
-* **Input & Sanitization:** Raw data is captured, converted to lowercase, and stripped of whitespaces for normalized processing[cite: 1].
-* **Process (The Logic Skeleton):** Intent matching is handled through a Python dictionary (Hash Map)[cite: 1].
-* **Output:** Generates a predefined response or an atomic fallback for unknown intents[cite: 1].
+This chatbot interacts with users by responding to predefined inputs using **if-elif-else** decision-making logic. It runs continuously until the user enters the exit command.
 
-## 🚀 Key Engineering Decisions
-* **Algorithmic Efficiency:** The chatbot avoids the "anti-pattern" of rigid `if-elif` ladders, which carry a linear time complexity of O(n)[cite: 1]. Instead, it uses a Python dictionary for intent routing, achieving O(1) constant time complexity for instant lookups regardless of scale[cite: 1].
-* **The Infinite Loop:** The program runs on a continuous `while` cycle (the heartbeat) that only terminates when a specific kill command (`exit`) is received[cite: 1].
-* **Control Layer Foundation:** This deterministic approach mimics the foundational logic used in modern AI guardrails (like NVIDIA NeMo and Llama Guard) to filter probabilistic outputs[cite: 1]. 
+## ✨ Features
 
-## 💻 How to Run
-1. Ensure Python 3.x is installed on your machine.
-2. Clone this repository.
-3. Open a terminal and navigate to the project directory.
-4. Run the script:
-   ```bash
-   python chatbot.py
+- Handles greetings
+- Answers predefined questions
+- Uses if-elif-else control flow
+- Runs in a continuous loop
+- Handles unknown inputs with a default response
+- Simple and beginner-friendly implementation
+
+## 🛠️ Technologies Used
+
+- Python 3
+
+## 📂 Project Structure
+
+```
+Rule-Based-AI-Chatbot/
+│
+├── chatbot.py
+├── README.md
+
+## 🚀 How to Run
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/Rule-Based-AI-Chatbot.git
+```
+
+2. Navigate to the project folder
+
+```bash
+cd Rule-Based-AI-Chatbot
+```
+
+3. Run the chatbot
+
+```bash
+python chatbot.py
+```
+
+## 💬 Sample Output
+
+```
+==================================================
+🤖 Welcome to the Rule-Based AI Chatbot
+Type 'bye' to exit the chatbot.
+==================================================
+
+You: hi
+Bot: Hello! Nice to meet you.
+
+You: what is ai
+Bot: AI stands for Artificial Intelligence.
+
+You: python
+Bot: Python is a popular programming language used for AI and software development.
+
+You: bye
+Bot: Goodbye! Have a great day. 👋
+```
+
+## 📖 Concepts Used
+
+- Variables
+- Input and Output
+- While Loop
+- If-Elif-Else Statements
+- Control Flow
+- String Methods (`lower()`, `strip()`)
+- Rule-Based Decision Making
+
+## 🎯 Learning Outcome
+
+This project demonstrates the fundamentals of a rule-based AI chatbot using Python. It helps build a strong foundation in control flow, decision-making, and basic AI concepts.
+
+## 👨‍💻 Author
+
+**Raghav Garg**
+
+
+⭐ If you found this project helpful, consider giving it a star!
